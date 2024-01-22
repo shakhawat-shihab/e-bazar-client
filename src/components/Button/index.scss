@@ -1,0 +1,32 @@
+@use "../../styles/index.scss" as *;
+
+.button {
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: $plus-jakarta-sans;
+  font-weight: 700;
+  line-height: 17.5px;
+  text-transform: capitalize;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0px;
+}
+
+.button--medium {
+  padding: 16px 20px;
+  font-size: 16px;
+}
+
+.button--large {
+  width: 100%;
+  // padding: 18px 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.button--small {
+  padding: 13px 12px;
+}

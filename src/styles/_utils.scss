@@ -1,0 +1,52 @@
+@import "colors";
+@import "fonts";
+
+.text-midnight-blue {
+  color: $color-midnight-blue;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.bg-shade-green {
+  background-color: $color-shade-green;
+  &:hover {
+    background-color: lighten($color-shade-green, 10%);
+  }
+}
+
+.bg-lavender-gray {
+  background-color: $color-lavender-gray;
+}
+.bg-lavender-blue {
+  background-color: $color-lavender-blue;
+}
+
+.bg-pale-yellow {
+  background-color: $color-pale-yellow;
+}
+
+.bg-white {
+  background-color: $color-white;
+}
+
+.bg-sage-violet {
+  background-color: $color-sage-violet;
+}
+
+.border-bride-blush {
+  border: 1px solid $color-shade-green;
+}
+
+.padding-x-zero {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.bg-lavender-blue {
+  background-color: $color-lavender-blue;
+}
+.bg-inherit {
+  background-color: inherit;
+}
