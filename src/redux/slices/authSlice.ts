@@ -12,7 +12,12 @@ export const authSlice = createSlice({
     },
     addUserData: (state, action) => {
       console.log("adding user data", action.payload);
-      state.userData = action.payload;
+      state.userData = {
+        token: action?.payload?.token,
+        userId: action?.payload?.authData?.userId,
+        email: action?.payload?.authData?.email,
+        _id: action?.payload?.authData?._id,
+      };
     },
     removeUserData: (state) => {
       console.log("removing user data");

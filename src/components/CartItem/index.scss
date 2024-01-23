@@ -1,0 +1,4 @@
+.product-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+}

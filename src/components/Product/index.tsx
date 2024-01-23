@@ -4,16 +4,23 @@ import React from "react";
 import "./index.scss";
 import Button from "../Button";
 import { FaCartPlus } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import useCartHook from "@/hooks/useCartHook";
 
 type Props = {
   product: IProduct;
 };
 
 export default function Product({ product }: Props) {
+  const { auth } = useSelector((state: any) => state);
+  // console.log(auth?.userData?.userId);
+
+  const { addToCart } = useCartHook();
+
   return (
     <div className="product-card">
       <div className="product-card__image-wrapper">
-        <Image
+        <img
           src={product?.thumbnail}
           height={400}
           width={300}
@@ -30,9 +37,12 @@ export default function Product({ product }: Props) {
       </div>
       <div className=" product-card__button-wrapper">
         <div className=" product-card__button">
-          <Button size="large" className="bg-sage-violet text-white">
+          <Button
+            size="large"
+            className="bg-sage-violet text-white"
+            clickEvent={() => addToCart(auth?.userData?.userId, product?._id)}
+          >
             <span style={{ marginRight: "12px" }}> Add to Cart</span>
-
             <FaCartPlus size={24} className=" " />
           </Button>
         </div>

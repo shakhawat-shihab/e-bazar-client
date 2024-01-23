@@ -15,10 +15,12 @@ export default function FeaturedProducts({}: Props) {
   }, []);
   // console.log("products ", products);
   return (
-    <div className="product-wrapper">
-      {products?.map((product: IProduct) => (
-        <Product product={product} key={product?._id} />
-      ))}
+    <div>
+      <div className="product-wrapper">
+        {products?.map((product: IProduct) => (
+          <Product product={product} key={product?._id} />
+        ))}
+      </div>
     </div>
   );
 }

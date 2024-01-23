@@ -17,7 +17,7 @@ const useProductHook = () => {
     try {
       setIsLoadingProduct(true);
       const res = await productApi.loadProducts();
-      console.log("res?.data  ", res?.data?.data);
+      // console.log("res?.data  ", res?.data?.data);
       setProducts(res?.data?.data);
       // toast.success(res?.data?.message);
     } catch (e: any) {
