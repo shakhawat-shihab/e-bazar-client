@@ -57,7 +57,7 @@ export default function NavigationBar({}: Props) {
           size="medium"
           className=" navbar__button text-midnight-blue bg-shade-green"
         >
-          Log In
+          <Link href="login">Log In</Link>
         </Button>
       </div>
 
